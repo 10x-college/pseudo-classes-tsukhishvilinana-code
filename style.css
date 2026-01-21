@@ -1,0 +1,251 @@
+header {
+display: inline-block;
+width: 800px;
+height: 60px;
+padding: 20px;
+white-space: nowrap;
+font-family: Quicksand;
+font-weight: 400;
+font-style: Regular;
+font-size: 15px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+height: 60px;
+position: relative; 
+margin: 0;
+}
+
+
+.middle {
+width: 400px;
+height: 60px;
+display: flex;
+
+justify-content: center;
+position: absolute;
+  left: calc(30% - 50px);
+  top: 20px;
+ border:none;
+outline:none;
+}
+
+.middle .input-search {
+width: 100%;
+height: 20px;
+font-family: Quicksand;
+font-weight: 400;
+font-size: 15px;
+color: #89928E;
+background-color: #ECF3F5;
+border-radius: 10px;
+top: 20px;
+padding:20px 120px 20px 30px;
+border:none;
+outline:none;
+}
+
+.right {
+    width: 100px;
+    height: 60px;
+   display: flex;
+   align-items: center;
+   justify-content: right;
+   position: absolute;
+   left: 1200px;
+   top: 20px;
+   border:none;
+outline:none;
+}
+
+
+.date {
+    /* ძველი ზომები და მარგინები წავშალე/შევცვალე, რომ არ გაჭედოს */
+    display: flex;            /* ფლექსის ჩართვა */
+    align-items: center;      /* სიმაღლეში ცენტრში გასწორება */
+    gap: 10px;                /* დაშორება აიკონსა და ტექსტს შორის */
+    
+    /* ტექსტის სტილი */
+    font-size: 14px;
+    font-weight: 500;         /* ოდნავ გამუქებული, რომ კარგად იკითხებოდეს */
+    color: #2C3832;          
+    margin-right: 10px;
+}
+
+
+.button {
+    /* ზომები */
+    width: 170px;
+    height: 60px;
+    
+    /* ფერები და ფორმა */
+    background-color: #B1CED4;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+
+    display: flex;            /* ელემენტები ხდის მოქნილს */
+    align-items: center;      /* ასწორებს ვერტიკალურად (სიმაღლეში) შუაში */
+    justify-content: center;  /* ასწორებს ჰორიზონტალურად (სიგანეში) შუაში */
+    gap: 10px;  
+    padding: 30px;              /* დაშორება აიკონსა (SVG) და ტექსტს შორის */
+}
+
+    
+.menu {
+    /* 1. მარჯვენა და მარცხენა საზღვარი 140px */
+    margin: 0 300px 50px 140px; 
+    
+    /* 2. ფლექსის ჩართვა */
+    display: flex;
+    flex-wrap: wrap; /* რომ არ გაჭედოს პატარა ეკრანზე */
+    
+    /* 3. ეს არის მთავარი! - ბარათებს გაშლის კიდეებზე და შუაში ადგილს გაყოფს */
+    justify-content: space-between; 
+    
+    /* დამატებითი, რომ ბარათები ერთმანეთს არ მიეწებოს თუ ეკრანი დაპატარავდა */
+    gap: 20px; 
+}
+
+.container {
+    /* 4. შენი მოთხოვნილი ფიქსირებული ზომები */
+    width: 203px;
+    height: 214px;
+    
+    /* დიზაინი */
+    display: flex;
+    flex-direction: column;
+    background-color: #D8E6E9;
+    border-radius: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* სურათის გასწორება */
+.container .img {
+    width: 100%;
+    height: 143px; /* ან რამდენიც გინდა */
+}
+
+.container .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.container {
+    width: 203px;
+    height: 214px; /* ფიქსირებული სიმაღლე */
+    
+    display: flex;
+    flex-direction: column;
+    background-color: #D8E6E9;
+    border-radius: 15px;
+    overflow: hidden; /* რაც არ ეტევა, იჭრება (ამიტომ უნდა დავატიოთ) */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.container .img {
+    width: 100%;
+    height: 140px; /* სურათის ადგილი */
+    flex-shrink: 0; /* სურათი არ დაპატარავდეს */
+}
+
+.container .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* სათაური (შევამცირეთ დაშორებები) */
+.food-name {
+    text-align: center;
+    font-size: 14px;
+    margin: 8px 0; /* <--- შევამცირეთ, რომ ადგილი არ წაიღოს */
+    font-weight: bold;
+    color: #333;
+}
+
+/* ქვედა ნაწილი (Category და აიკონები) */
+.cat-logo {
+    display: flex;
+    justify-content: space-between; /* გაშლა კიდეებზე */
+    align-items: center;
+    padding: 0 12px; /* გვერდებზე ადგილი */
+    margin-top: auto; /* ბოლოში ჩასვლა */
+    margin-bottom: 12px; /* ქვემოდანაც ცოტა ადგილი */
+}
+
+.cat-text {
+    font-size: 11px;
+    color: #666;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* მარჯვენა აიკონების ჯგუფი */
+.right-icons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* N აიკონი */
+.cat-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #E0C097;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.spice {
+    font-size: 12px;
+}
+
+.end {
+    width: 950px;
+    height: 100px;
+    margin: 0 200px 10px 130px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 77px;
+    position: relative;
+    bottom: 120px;
+    background-color: white;
+
+}
+
+.end button{
+    width: 150px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    border: none;
+ 
+    display: flex;            /* ელემენტები ხდის მოქნილს */
+    align-items: center;      /* ასწორებს ვერტიკალურად (სიმაღლეში) შუაში */
+    justify-content: center;  /* ასწორებს ჰორიზონტალურად (სიგანეში) შუაში */
+    gap: 10px;  
+}
+
+.end button:hover{
+   background-color: #4A5C2F;;
+}
